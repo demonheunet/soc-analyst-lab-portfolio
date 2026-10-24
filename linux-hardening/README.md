@@ -1,28 +1,15 @@
-# Wireshark Network Packet Analysis Labs
+# Linux System Administration & Security Investigations
 
-This section contains my hands-on packet analysis labs and investigations focusing on network telemetry triage, asset discovery, protocol dissection, and malware artifact identification.
+This section documents fundamental Linux command-line operations, folder structures, system updates, package auditing, and log inspection techniques used during security investigations.
 
 ---
 
-## Lab Case: Traffic Analysis Exercise (`2026-10-01-traffic-analysis-exercise.pcap`)
+## Core Competencies & Lab Tasks
 
-### Objective
-Perform network forensics on a compromised Active Directory environment to identify the victim asset, user account, compromise vector, and subsequent Command-and-Control (C2) activity.
-
-### Key Findings & Methodology
-* **Asset Discovery:** 
-  * Utilized Windows Browser Protocol filters (`browser.response_computer_name`) to quickly map out local endpoints advertising their hostnames.
-  * Identified the infected client hostname as **`DESKTOP-4VGYQX7`** (IP: `10.10.1.128`, MAC: `00:22:fb:ec:7e:e7`).
-* **User Attribution:** 
-  * Filtered Kerberos authentication requests (`kerberos.cname_string`) while excluding machine account objects (`$`) which will isolate human user activity.
-  * Confirmed the active user account associated with the compromised session as **`bdiaz`**.
-* **Compromise Vector:**
-  * Discovered unauthorized executable file download activity originating from an external IP address (`107.175.82.242`) over non-standard **TCP port 9000**.
-
-### Useful Wireshark Filters Used
-* Hostname discovery: `browser.response_computer_name`
-* User account identification: `kerberos.cname_string == 1 && !(kerberos.CNameString contains "$")`
-* Executable transfer tracking: `http.request.uri contains ".exe"` or `smb2.filename contains ".exe"` for exports to VirusTotal.com for further investigation.
+* **Directory & File Management:** Creating structured enterprise directory trees (`Accounting`, `Payroll`) and managing documentation templates (`Best Practices`).
+* **System Maintenance & Patching:** Executing administrative upgrades securely via package management tools (`sudo apt update && sudo apt upgrade`).
+* **Log Inspection & Parsing:** Investigating system changes and package histories directly from log files (e.g., inspecting `/var/log/dpkg.log`).
+* **Command-Line Network Utilities:** Leveraging `tcpdump`, `cat`, and `grep` for quick host-level packet inspections and string filtering.
 
 ---
 *[Back to Main Portfolio Dashboard](../README.md)*
