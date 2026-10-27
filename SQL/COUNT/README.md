@@ -6,7 +6,7 @@ This repository documents hands-on SQL practice exercises focused on data aggreg
 
 # Overview & Schema
 
-# SQL Queries & Results
+SQL Queries & Results
 
 1. Count Locations by Writer
 
