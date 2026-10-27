@@ -12,8 +12,6 @@ As outlined in the lab guidelines[cite: 37]:
 * Build an image using a `Dockerfile`[cite: 37]
 * Push an image to IBM Cloud Container Registry[cite: 37]
 
-![Lab Objectives Overview](linux_docker_objective.png)
-
 ---
 
 ## Environment & Lab Setup
