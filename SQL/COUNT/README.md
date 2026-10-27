@@ -17,10 +17,6 @@ SQL Queries & Results
 4. Count Historic Films Prior to 1950
 
 
-# Summary of Results
-
-# How to Run
-
 ## 🗄 Overview & Schema
 
 Database: SanFranciscoFilmLocations
