@@ -18,10 +18,3 @@ This repository contains SQL query implementations and execution logs covering r
 
 ---
 
-## Lab Progression & Queries Executed
-
-### 1. Initial State Query
-Verified the starting records stored in the `Instructor` table:
-
-```sql
-SELECT * FROM Instructor;
